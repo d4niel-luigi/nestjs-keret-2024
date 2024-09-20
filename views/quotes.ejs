@@ -3,15 +3,21 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title><%= message %></title>
+    <title>Document</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+      li {padding: 3px;}
+    </style>
 </head>
 <body>
-  <table>
-    <tr><% for (let h of quotes.quotes) { %><td><% h.id %></td>
-    <td><% h.quote %></td><td><% h.author %></td></tr> <% } %>
-
-  </table>
+  <ul>
+    <% for (let h of quotes.quotes) { %>
+    <li><%= h.id %></li>
+    <li><%= h.quote %></li>
+    <li><%= h.author %></li>
+    <% } %>
+  </ul>
+  <p> <%= quote.randomQuote %> </p>
 </body>
 </html>
